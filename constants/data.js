@@ -17,3 +17,12 @@ export const socialIcons = [
   { name: "facebook", icon: FaFacebook, color: "blue", size: 27 },
   { name: "pinterest", icon: FaPinterest, color: "red", size: 27 },
 ];
+
+export const categories = [
+  "style",
+  "fashion",
+  "coding",
+  "travel",
+  "business",
+  "gaming",
+];
