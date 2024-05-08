@@ -11,7 +11,7 @@ import AuthLinks from "./AuthLinks";
 const Header = () => {
   const [mobileNav, setMobileNav] = useState(false);
   return (
-    <header className="flex justify-between items-center px-5 py-5 h-[100px] relative">
+    <header className="flex justify-between items-center my-5 ">
       {/* <nav className="hidden lg:flex gap-4 items-center">
         {socialIcons.map((socialIcon) => (
           <div key={socialIcon.name}>
@@ -29,13 +29,21 @@ const Header = () => {
           className="rounded-md "
         />
       </div>
-      <div
-        onClick={() => setMobileNav(!mobileNav)}
-        className="md:hidden z-20 cursor-pointer">
+      <div className=" flex items-center gap-8 md:hidden z-20 cursor-pointer">
+        <ThemeToggle />
         {mobileNav ? (
-          <FaWindowClose size={34} color="red" />
+          <FaWindowClose
+            size={34}
+            className=""
+            color="red"
+            onClick={() => setMobileNav(!mobileNav)}
+          />
         ) : (
-          <RxHamburgerMenu size={34} color="white" />
+          <RxHamburgerMenu
+            size={34}
+            className="dark:text-white text-black"
+            onClick={() => setMobileNav(!mobileNav)}
+          />
         )}
       </div>
       <nav className="hidden md:flex gap-4 ">
@@ -50,8 +58,8 @@ const Header = () => {
 
       {/* MOBILE NAV */}
       {mobileNav && (
-        <nav className="flex flex-col gap-10 bg-inherit h-screen w-screen mt-7 absolute right-0 left-0 top-0 bottom-0 justify-center items-center md:hidden">
-          <ThemeToggle />
+        <nav className="flex flex-col gap-10 bg-dark-soft-bg/95 text-white  absolute h-screen w-screen mx-auto top-0 left-0 right-0 bottom-0 justify-center items-center md:hidden z-10">
+          {/* <ThemeToggle /> */}
           {navigation.map((nav) => (
             <Link
               href={nav.href}
