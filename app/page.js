@@ -8,7 +8,7 @@ export default function Home() {
     <main>
       <Featured />
       <CategoryList />
-      <section className="flex gap-14">
+      <section className="flex gap-10">
         <PostList />
         {/* <aside className="flex-2"> */}
         <Side />
