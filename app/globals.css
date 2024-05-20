@@ -40,6 +40,18 @@ body {
   --softTextColor: var(--light__softTextColor);
 }
 
+.dark .ql-toolbar {
+  background-color: white;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.ql-container {
+  font-size: 23px !important;
+  min-height: 50vh;
+  border-bottom-right-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+}
 /* [data-theme="dark"],
 [data-theme="dark"] body {
   color: #fff;
@@ -86,14 +98,6 @@ body {
     max-width: 475px;
   }
 } */
-
-.ql-container {
-  font-size: 28px !important;
-}
-
-.quill > .ql-container > .ql-editor.ql-blank::before {
-  color: #b3b3b1;
-}
 
 @layer utilities {
   .text-balance {
