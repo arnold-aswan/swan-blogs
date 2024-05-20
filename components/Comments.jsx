@@ -12,7 +12,7 @@ const Comments = () => {
         <div>
           <textarea
             placeholder="Leave a comment..."
-            className="p-3 rounded-lg w-full h-[5rem] border-2 border-gray-200 "></textarea>
+            className="p-3 rounded-lg w-full h-[5rem] border-2 border-gray-200 outline-none "></textarea>
           <button className="px-8 text-white font-semibold py-4 mt-3 bg-dark-soft-bg dark:bg-light-soft-bg dark:text-light-text rounded-lg">
             Comment
           </button>
