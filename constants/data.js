@@ -26,3 +26,4 @@ export const categories = [
   "business",
   "gaming",
 ];
+
