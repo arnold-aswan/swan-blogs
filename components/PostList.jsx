@@ -1,5 +1,6 @@
 import React from "react";
 import Post from "./Post";
+import Pagination from "./Pagination";
 
 const CardList = () => {
   return (
@@ -8,6 +9,7 @@ const CardList = () => {
       <Post />
       <Post />
       <Post />
+      <Pagination />
     </section>
   );
 };
