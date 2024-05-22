@@ -1,10 +1,13 @@
 "use client";
+import { useSession } from "next-auth/react";
 import React, { useState } from "react";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
+import { useRouter } from "next/navigation";
 
 const WritePage = () => {
   const [value, setValue] = useState("");
+  const { status } = useSession();
 
   const modules = {
     toolbar: [
@@ -21,6 +24,16 @@ const WritePage = () => {
       ["clean"],
     ],
   };
+
+  const router = useRouter();
+
+  if (status === "loading") {
+    return <div>Loading...</div>;
+  }
+
+  if (status === "authenticated") {
+    router.push("/");
+  }
   return (
     <div>
       <ReactQuill
